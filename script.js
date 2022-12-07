@@ -94,8 +94,10 @@ Circle81 = document.getElementById("circle81")
 
 
 var x = 0; // ------------------ ultimate decider
+//when even -> green (Player A)
+//when odd -> yellow (Player B)
+
 var counter = 0;
-var proceed = 0;
 
 // cross and circle interchange
 function counter1() {
@@ -441,6 +443,9 @@ function isPrime(a){
     }
 }
 
+//class -> .<classname>
+//id -> #<id_name>
+
 
 const startPrompt = document.querySelector(".start")
 const numberA = document.querySelector(".player-a h2")
@@ -511,11 +516,13 @@ function win1() {
     cross = document.getElementById("crossOverlay1")
     ansOverlay = document.getElementById("ansOverlay")
     if (Circle1.classList.contains("circleFix") && Circle5.classList.contains("circleFix") && Circle9.classList.contains("circleFix") || Circle3.classList.contains("circleFix") && Circle5.classList.contains("circleFix") && Circle7.classList.contains("circleFix") || Circle1.classList.contains("circleFix") && Circle4.classList.contains("circleFix") && Circle7.classList.contains("circleFix") || Circle2.classList.contains("circleFix") && Circle5.classList.contains("circleFix") && Circle8.classList.contains("circleFix") || Circle3.classList.contains("circleFix") && Circle6.classList.contains("circleFix") && Circle9.classList.contains("circleFix") || Circle1.classList.contains("circleFix") && Circle2.classList.contains("circleFix") && Circle3.classList.contains("circleFix") || Circle4.classList.contains("circleFix") && Circle5.classList.contains("circleFix") && Circle6.classList.contains("circleFix") || Circle7.classList.contains("circleFix") && Circle8.classList.contains("circleFix") && Circle9.classList.contains("circleFix")) {
-        ansOverlay.classList.add("Gwin")
+        ansOverlay.classList.add("Gwin") //green wins
     }
     if (cross1.classList.contains("crossFix") && cross5.classList.contains("crossFix") && cross9.classList.contains("crossFix") || cross3.classList.contains("crossFix") && cross5.classList.contains("crossFix") && cross7.classList.contains("crossFix") || cross1.classList.contains("crossFix") && cross4.classList.contains("crossFix") && cross7.classList.contains("crossFix") || cross2.classList.contains("crossFix") && cross5.classList.contains("crossFix") && cross8.classList.contains("crossFix") || cross3.classList.contains("crossFix") && cross6.classList.contains("crossFix") && cross9.classList.contains("crossFix") || cross1.classList.contains("crossFix") && cross2.classList.contains("crossFix") && cross3.classList.contains("crossFix") || cross4.classList.contains("crossFix") && cross5.classList.contains("crossFix") && cross6.classList.contains("crossFix") || cross7.classList.contains("crossFix") && cross8.classList.contains("crossFix") && cross9.classList.contains("crossFix")) {
-        ansOverlay.classList.add("Ywin")
+        ansOverlay.classList.add("Ywin") //yellow wins
     }
+    //circleFix -> green mark (player A)
+    //crossfix -> yellow mark (player B)
 }
 function win2() {
     circle = document.getElementById("circleOverlay2")
@@ -556,8 +563,8 @@ function win5() {
     circle = document.getElementById("circleOverlay5")
     cross = document.getElementById("crossOverlay5")
     ansOverlay = document.getElementById("ansOverlay")
-    if (Circle37.classList.contains("circleFix") && Circle41.classList.contains("circleFix") && Circle45.classList.contains("circleFix") || Circle39.classList.contains("circleFix") && Circle41.classList.contains("circleFix") && Circle43.classList.contains("circleFix") || Circle37.classList.contains("circleFix") && Circle40.classList.contains("circleFix") && Circle43.classList.contains("circleFix") || Circle38.classList.contains("circleFix") && Circle41.classList.contains("circleFix") && Circle44.classList.contains("circleFix") || Circle39.classList.contains("circleFix") && Circle42.classList.contains("circleFix") && Circle45.classList.contains("circleFix") || Circle37.classList.contains("circleFix") && Circle38.classList.contains("circleFix") && Circle39.classList.contains("circleFix") || Circle40.classList.contains("circleFix") && Circle41.classList.contains("circleFix") && Circle42.classList.contains("circleFix") || Circle43.classList.contains("circleFix") && Circle44.classList.contains("circleFix") && Circle45.classList.contains("circleFix")) {        circle.classList.add("circleFix2")
-ansOverlay.classList.add("Gwin")
+    if (Circle37.classList.contains("circleFix") && Circle41.classList.contains("circleFix") && Circle45.classList.contains("circleFix") || Circle39.classList.contains("circleFix") && Circle41.classList.contains("circleFix") && Circle43.classList.contains("circleFix") || Circle37.classList.contains("circleFix") && Circle40.classList.contains("circleFix") && Circle43.classList.contains("circleFix") || Circle38.classList.contains("circleFix") && Circle41.classList.contains("circleFix") && Circle44.classList.contains("circleFix") || Circle39.classList.contains("circleFix") && Circle42.classList.contains("circleFix") && Circle45.classList.contains("circleFix") || Circle37.classList.contains("circleFix") && Circle38.classList.contains("circleFix") && Circle39.classList.contains("circleFix") || Circle40.classList.contains("circleFix") && Circle41.classList.contains("circleFix") && Circle42.classList.contains("circleFix") || Circle43.classList.contains("circleFix") && Circle44.classList.contains("circleFix") && Circle45.classList.contains("circleFix")) {
+        ansOverlay.classList.add("Gwin")
     }
     if (cross37.classList.contains("crossFix") && cross41.classList.contains("crossFix") && cross45.classList.contains("crossFix") || cross39.classList.contains("crossFix") && cross41.classList.contains("crossFix") && cross43.classList.contains("crossFix") || cross37.classList.contains("crossFix") && cross40.classList.contains("crossFix") && cross43.classList.contains("crossFix") || cross38.classList.contains("crossFix") && cross41.classList.contains("crossFix") && cross44.classList.contains("crossFix") || cross39.classList.contains("crossFix") && cross42.classList.contains("crossFix") && cross45.classList.contains("crossFix") || cross37.classList.contains("crossFix") && cross38.classList.contains("crossFix") && cross39.classList.contains("crossFix") || cross40.classList.contains("crossFix") && cross41.classList.contains("crossFix") && cross42.classList.contains("crossFix") || cross43.classList.contains("crossFix") && cross44.classList.contains("crossFix") && cross45.classList.contains("crossFix")) {
         ansOverlay.classList.add("Ywin")
@@ -573,6 +580,45 @@ function win6() {
 
     }
     if (cross37.classList.contains("crossFix") && cross41.classList.contains("crossFix") && cross45.classList.contains("crossFix") || cross39.classList.contains("crossFix") && cross41.classList.contains("crossFix") && cross43.classList.contains("crossFix") || cross37.classList.contains("crossFix") && cross40.classList.contains("crossFix") && cross43.classList.contains("crossFix") || cross38.classList.contains("crossFix") && cross41.classList.contains("crossFix") && cross44.classList.contains("crossFix") || cross39.classList.contains("crossFix") && cross42.classList.contains("crossFix") && cross45.classList.contains("crossFix") || cross37.classList.contains("crossFix") && cross38.classList.contains("crossFix") && cross39.classList.contains("crossFix") || cross40.classList.contains("crossFix") && cross41.classList.contains("crossFix") && cross42.classList.contains("crossFix") || cross43.classList.contains("crossFix") && cross44.classList.contains("crossFix") && cross45.classList.contains("crossFix")) {        overlay6.classList.add("displayIMP");
+        ansOverlay.classList.add("Ywin")
+
+    }
+}
+function win7() {
+    circle = document.getElementById("circleOverlay7")    
+    cross = document.getElementById("crossOverlay7")
+    ansOverlay = document.getElementById("ansOverlay")
+    if (Circle55.classList.contains("circleFix") && Circle59.classList.contains("circleFix") && Circle63.classList.contains("circleFix") || Circle57.classList.contains("circleFix") && Circle59.classList.contains("circleFix") && Circle61.classList.contains("circleFix") || Circle55.classList.contains("circleFix") && Circle58.classList.contains("circleFix") && Circle61.classList.contains("circleFix") || Circle56.classList.contains("circleFix") && Circle59.classList.contains("circleFix") && Circle62.classList.contains("circleFix") || Circle57.classList.contains("circleFix") && Circle60.classList.contains("circleFix") && Circle63.classList.contains("circleFix") || Circle55.classList.contains("circleFix") && Circle56.classList.contains("circleFix") && Circle57.classList.contains("circleFix") || Circle58.classList.contains("circleFix") && Circle59.classList.contains("circleFix") && Circle60.classList.contains("circleFix") || Circle61.classList.contains("circleFix") && Circle62.classList.contains("circleFix") && Circle63.classList.contains("circleFix")) {
+        ansOverlay.classList.add("Gwin")
+
+    }
+    if (cross55.classList.contains("crossFix") && cross59.classList.contains("crossFix") && cross63.classList.contains("crossFix") || cross57.classList.contains("crossFix") && cross59.classList.contains("crossFix") && cross61.classList.contains("crossFix") || cross55.classList.contains("crossFix") && cross58.classList.contains("crossFix") && cross61.classList.contains("crossFix") || cross56.classList.contains("crossFix") && cross59.classList.contains("crossFix") && cross62.classList.contains("crossFix") || cross57.classList.contains("crossFix") && cross60.classList.contains("crossFix") && cross63.classList.contains("crossFix") || cross55.classList.contains("crossFix") && cross56.classList.contains("crossFix") && cross57.classList.contains("crossFix") || cross58.classList.contains("crossFix") && cross59.classList.contains("crossFix") && cross60.classList.contains("crossFix") || cross61.classList.contains("crossFix") && cross62.classList.contains("crossFix") && cross63.classList.contains("crossFix")) {        overlay7.classList.add("displayIMP");
+        ansOverlay.classList.add("Ywin")
+
+    }
+}
+function win8() {
+    circle = document.getElementById("circleOverlay6")    
+    cross = document.getElementById("crossOverlay6")
+    ansOverlay = document.getElementById("ansOverlay")
+    if (Circle64.classList.contains("circleFix") && Circle68.classList.contains("circleFix") && Circle72classList.contains("circleFix") || Circle66.classList.contains("circleFix") && Circle68.classList.contains("circleFix") && Circle70.classList.contains("circleFix") || Circle64.classList.contains("circleFix") && Circle67.classList.contains("circleFix") && Circle70.classList.contains("circleFix") || Circle65.classList.contains("circleFix") && Circle68.classList.contains("circleFix") && Circle71.classList.contains("circleFix") || Circle66.classList.contains("circleFix") && Circle69.classList.contains("circleFix") && Circle72.classList.contains("circleFix") || Circle64.classList.contains("circleFix") && Circle65.classList.contains("circleFix") && Circle66.classList.contains("circleFix") || Circle67.classList.contains("circleFix") && Circle68.classList.contains("circleFix") && Circle69.classList.contains("circleFix") || Circle70.classList.contains("circleFix") && Circle71.classList.contains("circleFix") && Circle72.classList.contains("circleFix")) {
+        ansOverlay.classList.add("Gwin")
+
+    }
+    if (cross64.classList.contains("crossFix") && cross68.classList.contains("crossFix") && cross71.classList.contains("crossFix") || cross66.classList.contains("crossFix") && cross68.classList.contains("crossFix") && cross70.classList.contains("crossFix") || cross64.classList.contains("crossFix") && cross67.classList.contains("crossFix") && cross70.classList.contains("crossFix") || cross65.classList.contains("crossFix") && cross68.classList.contains("crossFix") && cross71.classList.contains("crossFix") || cross66.classList.contains("crossFix") && cross69.classList.contains("crossFix") && cross72.classList.contains("crossFix") || cross64.classList.contains("crossFix") && cross65.classList.contains("crossFix") && cross66.classList.contains("crossFix") || cross67.classList.contains("crossFix") && cross68.classList.contains("crossFix") && cross69.classList.contains("crossFix") || cross70.classList.contains("crossFix") && cross71.classList.contains("crossFix") && cross72.classList.contains("crossFix")) {        overlay8.classList.add("displayIMP");
+        ansOverlay.classList.add("Ywin")
+
+    }
+}
+function win9() {
+    circle = document.getElementById("circleOverlay6")    
+    cross = document.getElementById("crossOverlay6")
+    ansOverlay = document.getElementById("ansOverlay")
+    if (Circle73.classList.contains("circleFix") && Circle77.classList.contains("circleFix") && Circle81.classList.contains("circleFix") || Circle75.classList.contains("circleFix") && Circle77.classList.contains("circleFix") && Circle79.classList.contains("circleFix") || Circle73.classList.contains("circleFix") && Circle76.classList.contains("circleFix") && Circle79.classList.contains("circleFix") || Circle74.classList.contains("circleFix") && Circle77.classList.contains("circleFix") && Circle80.classList.contains("circleFix") || Circle75.classList.contains("circleFix") && Circle78.classList.contains("circleFix") && Circle81.classList.contains("circleFix") || Circle73.classList.contains("circleFix") && Circle74.classList.contains("circleFix") && Circle75.classList.contains("circleFix") || Circle76.classList.contains("circleFix") && Circle77.classList.contains("circleFix") && Circle78.classList.contains("circleFix") || Circle79.classList.contains("circleFix") && Circle80.classList.contains("circleFix") && Circle81.classList.contains("circleFix")) {
+        ansOverlay.classList.add("Gwin")
+
+    }
+    if (cross73.classList.contains("crossFix") && cross77.classList.contains("crossFix") && cross81.classList.contains("crossFix") || cross75.classList.contains("crossFix") && cross77.classList.contains("crossFix") && cross79.classList.contains("crossFix") || cross73.classList.contains("crossFix") && cross76.classList.contains("crossFix") && cross79.classList.contains("crossFix") || cross74.classList.contains("crossFix") && cross77.classList.contains("crossFix") && cross80.classList.contains("crossFix") || cross75.classList.contains("crossFix") && cross78.classList.contains("crossFix") && cross81.classList.contains("crossFix") || cross73.classList.contains("crossFix") && cross74.classList.contains("crossFix") && cross75.classList.contains("crossFix") || cross76.classList.contains("crossFix") && cross77.classList.contains("crossFix") && cross78.classList.contains("crossFix") || cross79.classList.contains("crossFix") && cross80.classList.contains("crossFix") && cross81.classList.contains("crossFix")) {        overlay9.classList.add("displayIMP");
         ansOverlay.classList.add("Ywin")
 
     }
@@ -3471,6 +3517,7 @@ function circle55() {
                 overlay1.style.display = "none";
             }
             }
+            win7()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -3521,6 +3568,7 @@ function circle56() {
                 }
                 overlay2.style.display = "none"
             }
+            win7()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -3570,6 +3618,7 @@ function circle57() {
                 }
                 overlay3.style.display = "none"
             }
+            win7()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -3619,6 +3668,7 @@ function circle58() {
                 }
                 overlay4.style.display = "none"
             }
+            win7()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -3668,6 +3718,7 @@ function circle59() {
                 }
                 overlay5.style.display = "none"
             }
+            win7()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -3717,6 +3768,7 @@ function circle60() {
                 }
                 overlay6.style.display = "none"
             }
+            win7()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -3766,6 +3818,7 @@ function circle61() {
                 }
                 overlay7.style.display = "none"
             }
+            win7()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -3815,6 +3868,7 @@ function circle62() {
                 }
                 overlay8.style.display = "none"
             }
+            win7()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -3864,6 +3918,7 @@ function circle63() {
                 }
                 overlay9.style.display = "none"
             }
+            win7()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -3930,6 +3985,7 @@ function circle64() {
                 overlay1.style.display = "none";
             }
             }
+            win8()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -3980,6 +4036,7 @@ function circle65() {
                 }
                 overlay2.style.display = "none"
             }
+            win8()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -4029,6 +4086,7 @@ function circle66() {
                 }
                 overlay3.style.display = "none"
             }
+            win8()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -4078,6 +4136,7 @@ function circle67() {
                 }
                 overlay4.style.display = "none"
             }
+            win8()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -4127,6 +4186,7 @@ function circle68() {
                 }
                 overlay5.style.display = "none"
             }
+            win8()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -4176,6 +4236,7 @@ function circle69() {
                 }
                 overlay6.style.display = "none"
             }
+            win8()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -4225,6 +4286,7 @@ function circle70() {
                 }
                 overlay7.style.display = "none"
             }
+            win8()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -4274,6 +4336,7 @@ function circle71() {
                 }
                 overlay8.style.display = "none"
             }
+            win8()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -4323,6 +4386,7 @@ function circle72() {
                 }
                 overlay9.style.display = "none"
             }
+            win8()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -4387,6 +4451,7 @@ function circle73() {
                 overlay1.style.display = "none";
             }
             }
+            win9()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -4437,6 +4502,7 @@ function circle74() {
                 }
                 overlay2.style.display = "none"
             }
+            win9()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -4486,6 +4552,7 @@ function circle75() {
                 }
                 overlay3.style.display = "none"
             }
+            win9()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -4535,6 +4602,7 @@ function circle76() {
                 }
                 overlay4.style.display = "none"
             }
+            win9()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -4584,6 +4652,7 @@ function circle77() {
                 }
                 overlay5.style.display = "none"
             }
+            win9()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -4633,6 +4702,7 @@ function circle78() {
                 }
                 overlay6.style.display = "none"
             }
+            win9()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -4682,6 +4752,7 @@ function circle79() {
                 }
                 overlay7.style.display = "none"
             }
+            win9()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -4731,6 +4802,7 @@ function circle80() {
                 }
                 overlay8.style.display = "none"
             }
+            win9()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
@@ -4780,6 +4852,7 @@ function circle81() {
                 }
                 overlay9.style.display = "none"
             }
+            win9()
             counter1()
             submit.removeEventListener("submit",submission)
         }else{
