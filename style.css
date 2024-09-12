@@ -29,6 +29,10 @@
     display: flex;
     justify-content: flex-end;
 }
+#b1{ 
+color:white;
+background-color:black;
+}
 
 .nav-item {
     font-size: 2vh;
